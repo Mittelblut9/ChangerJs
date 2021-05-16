@@ -24,6 +24,7 @@
 - [About](#about)
 - [Getting Started](#getting_started)
 - [Usage](#usage)
+- [Config](#config)
 - [Built Using](#built_using)
 
 ## 🧐 About <a name = "about"></a>
@@ -100,7 +101,7 @@ console.log(ChangerJSData);
 ...
 ```
 
-## ⚙️ Config <a name="usage"></a>
+## ⚙️ Config <a name="config"></a>
 <br>
 
 ```js
