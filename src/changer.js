@@ -2,7 +2,7 @@ const Information = {
     Author: 'www.blackdayz.de',
     Version: '0.0.1',
     Licensce: 'OpenSource',
-    Type: 'Libary'
+    Type: 'Library'
 }
 
 export var ChangerJSData = [];
