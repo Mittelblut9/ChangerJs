@@ -41,6 +41,8 @@ Implement in your Code
 
 ```js
 <script src="your/path/to/the/file/changer.js" type="module" async defer>
+or
+<script src="https://blackdayz.de/js/changerjs" type="module" async defer>
 ```
 
 <br>
