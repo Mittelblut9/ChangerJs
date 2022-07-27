@@ -36,6 +36,9 @@
         <script>
             window.addEventListener('onChanges', function(evt) {
                 const {changes, isDataChanged} = evt.detail;
+
+                console.log('Changes:', changes);
+                console.log('Is Data Changed:', isDataChanged);
             });
         </script>
     </body>
