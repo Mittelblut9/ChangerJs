@@ -6,14 +6,13 @@
         <title>Changer JS</title>
         <meta name="author" content="BlackDayz &copy;" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="src/changer.js" type="module" defer></script>
-        <script type="module" src="src/test.js" defer></script>
+
+        <script src="lib/changer.js" type="module" async defer></script>
     </head>
 
     <body style="background: rgb(14, 14, 14); color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
         <label>Inputtype Text</label>
-        <input type="text" value="Text Input" class="ChangerJSInput" />
+        <input type="text" id="username" value="Text Input" class="ChangerJSInput" />
         <br />
         <br />
         <br />
@@ -31,6 +30,14 @@
         <input type="tel" value="+49234567890" class="ChangerJSInput" />
         <br />
         <input type="submit" style="display: none;"/>
+
+        <p>Check the console!</p>
+
+        <script>
+            window.addEventListener('onChanges', function(evt) {
+                const {changes, isDataChanged} = evt.detail;
+            });
+        </script>
     </body>
 
 </html>

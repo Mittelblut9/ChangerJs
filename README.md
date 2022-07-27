@@ -40,14 +40,9 @@ Changer.js is an easy Library to handle client-side input changes.
 Implement in your Code
 
 ```js
-<script type="module" src="your/path/to/the/file/changer.js">
+<script src="your/path/to/the/file/changer.js" type="module" async defer>
 ```
 
-or
-
-```js
-import * from 'your/path/to/the/file/changer.js'
-```
 <br>
 
 ## 🎈 Usage <a name="usage"></a>
@@ -80,35 +75,46 @@ Additional you must declare the right inputtype.
   - week
 ```
 <br>
-Optional you can also check if some changes are available. Do do this call the variable:
-<br>
+
+<hr>
+
+<h3><strong>To get the newest data when the user changed the input values</strong></h3>
+<i>Note: This event will be triggered when the user leaved the input or pressed enter</i>
 <br>
 
 ```js
-ChangerJSDetector //Changes true = 1 / Changes false = 0
+window.addEventListener('onChanges', function(evt) {
+  const {changes, isDataChanged} = evt.detail;
+});
 ```
-to get the current Status.
 
 <br>
-To get all Data you must call the "ChangerJSData" variable to get all Data as an Array.
 
 ```js
-console.log(ChangerJSData);
+changes //Object - With all informations
+isDataChanged // Boolean
 ```
-```json
-//Output
-[{"ID":"84043244105","DivID":"TextInput","OldValues":"Test","NewValues":"Test123"},{"ID":"28896764081","DivID":"FileInput","OldValues":"","NewValues":{}},{"ID":"58460541139","DivID":"WeekInput","OldValues":"2021-W05","NewValues":"2021-W09"},{"ID":"80595015907","DivID":"TelInput","OldValues":"+123456789","NewValues":"+123456789"}]
-...
+
+<br>
+
+```js
+//Output of changes
+
+Object { changerID: "", divID: "", OldValue: "", NewValue: "" }
+​
+​...
 ```
+
+<br>
 
 ## ⚙️ Config <a name="config"></a>
 <br>
 
 ```js
 
-  ErrorMessages: 1 //Display Error Messages
+  ErrorMessages: true //Display Error Messages
 
-  InfoMessage: 1 //Display Author Informations
+  InfoMessage: true //Display Author Informations
 
 ```
 
@@ -116,4 +122,4 @@ console.log(ChangerJSData);
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [JQuery](https://jquery.com) - Library
+- Vanilla Javascript
