@@ -79,7 +79,7 @@ Additional you must declare the right inputtype.
 <hr>
 
 <h3><strong>To get the newest data when the user changed the input values</strong></h3>
-<i>Note: This event will be triggered when the user leaved the input or pressed enter</i>
+<i>Note: This event will be triggered when the user left the input or pressed enter</i>
 <br>
 
 ```js
@@ -102,7 +102,6 @@ isDataChanged // Boolean
 
 Object { changerID: "", divID: "", OldValue: "", NewValue: "" }
 ​
-​...
 ```
 
 <br>
