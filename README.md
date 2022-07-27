@@ -40,9 +40,9 @@ Changer.js is an easy Library to handle client-side input changes.
 Implement in your Code
 
 ```js
-<script src="your/path/to/the/file/changer.js" type="module" async defer>
+<script src="your/path/to/the/file/changer.js" async defer>
 or
-<script src="https://blackdayz.de/js/changerjs" type="module" async defer>
+<script src="https://blackdayz.de/js/changerjs" async defer>
 ```
 
 <br>
