@@ -54,7 +54,7 @@ To do this just add to your inputs this Class:
 <br><br>
 
 ```html
-<input class="ChangerJSInput">
+<input class="ChangerJSInput" data-cid ="example">
 ```
 Additional you must declare the right inputtype.
 
@@ -90,6 +90,16 @@ window.addEventListener('onChanges', function(evt) {
 
   //If you want to have all changed data only
   const allChanges = changes.filter(data=> data.hasChanged)
+
+  //
+  whatIsCid() {
+    /*
+      data-cid is to help you to track the action to it's correct data
+
+      For example you want to change the username, but you already have an id for the input.
+      Then you can add the data-cid attribute and select it later out of the object.
+    */
+  }
 });
 ```
 
