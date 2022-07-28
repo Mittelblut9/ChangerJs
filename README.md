@@ -87,6 +87,9 @@ Additional you must declare the right inputtype.
 ```js
 window.addEventListener('onChanges', function(evt) {
   const {changes, isDataChanged} = evt.detail;
+
+  //If you want to have all changed data only
+  const allChanges = changes.filter(data=> data.hasChanged)
 });
 ```
 
