@@ -1,48 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Changer JS</title>
-        <meta name="author" content="BlackDayz &copy;" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!--<script src="https://blackdayz.de/js/changerjs" async defer></script>-->
-        <script src="lib/changer.js" async defer></script> 
-    </head>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Changer JS</title>
+    <meta name="author" content="BlackDayz &copy;" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <body style="background: rgb(14, 14, 14); color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-        <label >Inputtype Text</label>
-        <input type="text" data-cid="username" value="Text Input" class="ChangerJSInput" />
-        <br />
-        <textarea class="ChangerJSInput"></textarea>
-        <br />
-        <br />
-        <label>Inputtype File</label>
-        <input type="file" class="ChangerJSInput" />
-        <br />
-        <br />
-        <br />
-        <label>Inputtype week</label>
-        <input type="week" value="2021-W19" class="ChangerJSInput" />
-        <br />
-        <br />
-        <br />
-        <label>Inputtype tel</label>
-        <input type="tel" value="+49234567890" class="ChangerJSInput" />
-        <br />
-        <input type="submit" style="display: none;"/>
+    <!--<script src="https://blackdayz.de/js/changerjs" async defer></script>-->
+    <script src="lib/changer.js" async defer></script>
+</head>
 
-        <p>Check the console!</p>
+<body style="background: rgb(14, 14, 14); color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <label>Inputtype Text</label>
+    <input type="text" data-cid="username" value="Text Input" class="ChangerJSInput" />
+    <br />
+    <textarea class="ChangerJSInput"></textarea>
+    <br />
+    <br />
+    <label>Inputtype File</label>
+    <input type="file" class="ChangerJSInput" />
+    <br />
+    <br />
+    <br />
+    <label>Inputtype week</label>
+    <input type="week" value="2021-W19" class="ChangerJSInput" />
+    <br />
+    <br />
+    <br />
+    <label>Inputtype tel</label>
+    <input type="tel" value="+49234567890" class="ChangerJSInput" />
+    <br />
+    <input type="submit" style="display: none;" />
 
-        <script>
-            window.addEventListener('onChanges', function(evt) {
-                const {changes, isDataChanged} = evt.detail;
+    <button type="submit" id="send">Submit</button>
 
-                console.log('Changes:', changes);
-                console.log('Is Data Changed:', isDataChanged);
-            });
-        </script>
-    </body>
+    <p>Check the console!</p>
+
+
+    <script>
+        // window.addEventListener('onChanges', function (evt) {
+        //     const {
+        //         changes,
+        //         isDataChanged
+        //     } = evt.detail;
+
+        //     console.log('Changes:', changes);
+        //     console.log('Is Data Changed:', isDataChanged);
+        // });
+
+        // document.getElementById('send').addEventListener('click', function () {
+        //     window.addEventListener('onClickChanges', function (evt) {
+        //         const {
+        //             changes,
+        //             isDataChanged
+        //         } = evt.detail;
+
+        //         console.log('Changes:', changes.filter(change => change.hasChanged));
+        //         console.log('Is Data Changed:', isDataChanged);
+        //     })
+        // });
+    </script>
+</body>
 
 </html>

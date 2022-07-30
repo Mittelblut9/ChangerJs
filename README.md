@@ -105,6 +105,21 @@ window.addEventListener('onChanges', function(evt) {
 
 <br>
 
+<h3><strong>To get more controll over your data by using Save buttons you can use the click event to handle changes.</strong></h3>
+
+```js
+document.getElementById('YOUR-ID').addEventListener('click/submit', function () {
+  window.addEventListener('onClickChanges', function (evt) {
+    const {changes, isDataChanged} = evt.detail;
+
+    //If you want to have all changed data only
+    const allChanges = changes.filter(data=> data.hasChanged)
+  })
+});
+```
+
+<br>
+
 ```js
 changes //Object - With all informations
 isDataChanged // Boolean
