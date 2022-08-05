@@ -1,6 +1,6 @@
 import {
     getCJChanges
-} from './lib/changer.js';
+} from '../lib/changer.js';
 
 // window.addEventListener('onChanges', function (evt) {
 //     const {

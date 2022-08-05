@@ -40,9 +40,13 @@ Changer.js is an easy Library to handle client-side input changes.
 Implement in your Code
 
 ```js
-<script src="your/path/to/the/file/changer.js" async defer>
+//type="module" is important
+<script src="your-js-file" type="module">
+
+//your-js-file
+import { getCJChanges } from "./your/path/to/changer.js";
 or
-<script src="https://blackdayz.de/js/changerjs" async defer>
+import { getCJChanges } from "https://blackdayz.de/js/changerjs";
 ```
 
 <br>
@@ -91,8 +95,8 @@ window.addEventListener('onChanges', function(evt) {
   //If you want to have all changed data only
   const allChanges = changes.filter(data=> data.hasChanged)
 
-  //
-  whatIsCid() {
+  //! (This is not a valid function)
+  example whatIsCid() {
     /*
       data-cid is to help you to track the action to it's correct data
 
@@ -105,22 +109,40 @@ window.addEventListener('onChanges', function(evt) {
 
 <br>
 
-<h3><strong>To get more controll over your data by using Save buttons you can use the click event to handle changes.</strong></h3>
+<h3><strong>To get more controll over your data by using Save buttons or other HTML DOM elements you can call a function to get all changes.</strong></h3>
 
 ```js
-document.getElementById('YOUR-ID').addEventListener('click/submit', function () {
-  window.addEventListener('onClickChanges', function (evt) {
-    const {changes, isDataChanged} = evt.detail;
 
-    //If you want to have all changed data only
-    const allChanges = changes.filter(data=> data.hasChanged)
-  })
-});
+//your-html-file
+
+//I'll use a button for this example
+//You can use every other HTML DOM element
+<button data-cjclick="true">Track all changes</button>
+
+
+//your-js-file
+xxx.addEventListener('xxx', () => {
+  const {
+    error,
+    changes,
+    isDataChanged
+  } = getCJChanges(el);
+
+  if(error) {
+    //Your errorhandler code
+    return;
+  }
+  
+  console.log('Changes:', changes);
+  console.log('Is Data Changed:', isDataChanged);
+  console.log('Error:', error);
+})
 ```
 
 <br>
 
 ```js
+error // false || Object
 changes //Object - With all informations
 isDataChanged // Boolean
 ```
@@ -130,7 +152,12 @@ isDataChanged // Boolean
 ```js
 //Output of changes
 
-Object { changerID: "", divID: "", OldValue: "", NewValue: "" }
+Object { 
+  changerID: "", 
+  divID: "", 
+  OldValue: "", 
+  NewValue: "" 
+}
 ​
 ```
 
@@ -140,9 +167,6 @@ Object { changerID: "", divID: "", OldValue: "", NewValue: "" }
 <br>
 
 ```js
-
-  ErrorMessages: true //Display Error Messages
-
   InfoMessage: true //Display Author Informations
 
 ```
