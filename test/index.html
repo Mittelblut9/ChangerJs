@@ -8,8 +8,7 @@
     <meta name="author" content="BlackDayz &copy;" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!--<script src="https://blackdayz.de/js/changerjs" async defer></script>-->
-    <script src="lib/changer.js" async defer></script>
+    <script src="test.js" type="module" async defer></script>
 </head>
 
 <body style="background: rgb(14, 14, 14); color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
@@ -34,34 +33,11 @@
     <br />
     <input type="submit" style="display: none;" />
 
-    <button type="submit" id="send">Submit</button>
+    <button type="submit" class="send" data-cjClick="true">Submit</button>
+
+    <button type="submit" class="send" data-cjClick="false">Submit, ChangerJS = false //Will throw a error</button>
 
     <p>Check the console!</p>
-
-
-    <script>
-        // window.addEventListener('onChanges', function (evt) {
-        //     const {
-        //         changes,
-        //         isDataChanged
-        //     } = evt.detail;
-
-        //     console.log('Changes:', changes);
-        //     console.log('Is Data Changed:', isDataChanged);
-        // });
-
-        // document.getElementById('send').addEventListener('click', function () {
-        //     window.addEventListener('onClickChanges', function (evt) {
-        //         const {
-        //             changes,
-        //             isDataChanged
-        //         } = evt.detail;
-
-        //         console.log('Changes:', changes.filter(change => change.hasChanged));
-        //         console.log('Is Data Changed:', isDataChanged);
-        //     })
-        // });
-    </script>
 </body>
 
 </html>
